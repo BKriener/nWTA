@@ -13,3 +13,7 @@ Basic winner-take-all dynamics with nonlinear inhibition.
 
 Plots activation and rate traces.
 Example of self-terminating nWTA.
+
+#### WTA_stability.py
+
+Computes breakdown of WTA as a function of noise amplitude sigma.
