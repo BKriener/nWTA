@@ -11,9 +11,9 @@ Python3 versions will be added.
 #### nwta_dyn_fcs.py:
 
 Function definitions for basic winner-take-all dynamics with nonlinear inhibition. 
-Is needed for the example script nwt_dyn_examples.py
+Is needed for the example script nwta_dyn_examples.py
 
-#### nwt_dyn_examples.py:
+#### nwta_dyn_examples.py:
 
 Plots activation and rate traces.
 Example of self-terminating nWTA (prints decision time and if result is accurate).
