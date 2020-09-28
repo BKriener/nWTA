@@ -4,7 +4,7 @@ introduced in
 "Robust parallel decision-making in neural circuits with nonlinear 
 inhibition" by B. Kriener, R. Chaudhuri, and Ila R. Fiete
  
-Code for simulation of (n)WTA dynamics. Written for python2.7
+Code for simulation of (n)WTA dynamics. 
 Author: B Kriener, R Chaudhuri (September 2020)   
 '''
 import numpy as np
@@ -32,7 +32,8 @@ def nWTAdyn_T(alpha, beta, N, x0, b, tau, tau_eta, sigma, theta, T=10000, dt=0.0
     Parameters:
     alpha    : strength of excitatory feedback (for stable WTA dynamics: alpha<1, 
                see Xie et al. (2002) Neural Computation 14, 2627-2646)
-    beta     : strength of inhibitory feedback (for WTA dynamics: (1-alpha)<beta, see Xie et al. (2002))
+    beta     : strength of inhibitory feedback (for WTA dynamics: (1-alpha)<beta, 
+               see Xie et al. (2002))
     N        : number of nodes in the network
     x0       : vector of initial conditions
     b        : vector of mean external input drives
@@ -40,7 +41,8 @@ def nWTAdyn_T(alpha, beta, N, x0, b, tau, tau_eta, sigma, theta, T=10000, dt=0.0
     tau_eta  : correlation time constant of OU noise
     sigma    : noise amplitude
     theta    : threshold for inhibition
-    NL       : bool, if True nWTA (with nonlinear inhibition), otherwise: conventional WTA
+    NL       : bool, if True nWTA (with nonlinear inhibition), 
+               otherwise: conventional WTA
     '''
 
     # initialize storing vectors and dynamical variables:
@@ -50,7 +52,7 @@ def nWTAdyn_T(alpha, beta, N, x0, b, tau, tau_eta, sigma, theta, T=10000, dt=0.0
     x     = x0
     eta   = np.zeros(N)
     sigma = sigma*np.sqrt(2*tau_eta) # rescale OU-amplitude to GWN amplitude for generation of OU noise  
-    for it in xrange(int(T/dt)):
+    for it in range(int(T/dt)):
         # deterministic part:
         xrr = (alpha*x - beta*sum(rect(x,theta)) + beta*rect(x,theta)) if NL else ((alpha+beta)*x - beta*sum(x)) 
         # OU noise generation:
