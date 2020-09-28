@@ -31,6 +31,7 @@ pl.xlabel('time',size=24)
 pl.ylabel('activation',size=24)
 pl.xticks(size=18)
 pl.yticks([0,1,2],size=18)
+pl.tight_layout()
 
 pl.figure()
 pl.plot(times, rr, lw=2, color='0.6')
@@ -39,12 +40,12 @@ pl.xlabel('time',size=24)
 pl.ylabel('rate',size=24)
 pl.xticks(size=18)
 pl.yticks([0,1,2],size=18)
-
+pl.tight_layout()
 pl.show()
 
 # self-terminating dynamics:
 
 time, x1, x2, sx1, sx2 = nw.nWTA_selfterm(alpha, beta, N, x0, b, sigma, tau, tau_eta, theta, dt, NL=True)
 
-print 'decision time: ',time
-print 'correct winner: ', x1==sx1
+print ('decision time: ',time)
+print ('correct winner: ', x1==sx1)

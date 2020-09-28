@@ -5,8 +5,6 @@ __________________________________________________________
 ### by B. Kriener, R. Chaudhuri and Ila R. Fiete
 __________________________________________________________
 
-NOTE: All code currently python2.7 (as used for results in the paper).
-Python3 versions will be added.
 
 #### nwta_dyn_fcs.py:
 
